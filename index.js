@@ -11,7 +11,9 @@ const app = express();
 const PORT = 8000;
 
 app.use(bodyParser.json());
-app.use(cors())
+app.use(cors({
+    origin: '*',
+}));
 // Connect to the MongoDB database
 mongoose.connect('mongodb+srv://rahulkashyap2870:LlMcNIU7AgTC7YUq@cluster0.hdanpfx.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
